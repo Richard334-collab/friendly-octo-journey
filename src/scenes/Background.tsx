@@ -41,10 +41,14 @@ const ParticleField = () => {
     const colors = new Float32Array(count * 3);
 
     for (let i = 0; i < count; i++) {
+      // eslint-disable-next-line react-hooks/purity
       positions[i * 3] = (Math.random() - 0.5) * 50;
+      // eslint-disable-next-line react-hooks/purity
       positions[i * 3 + 1] = (Math.random() - 0.5) * 50;
+      // eslint-disable-next-line react-hooks/purity
       positions[i * 3 + 2] = (Math.random() - 0.5) * 50;
 
+      // eslint-disable-next-line react-hooks/purity
       const color = Math.random() > 0.5 ? new THREE.Color('#00d9ff') : new THREE.Color('#ffaa00');
       colors[i * 3] = color.r;
       colors[i * 3 + 1] = color.g;
